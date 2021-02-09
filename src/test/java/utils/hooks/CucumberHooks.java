@@ -5,6 +5,10 @@ import io.cucumber.java.Before;
 import io.restassured.RestAssured;
 import utils.selenium.DriverController;
 
+
+import java.net.MalformedURLException;
+
+
 import static utils.settings.Settings.pathStarWars;
 import static utils.settings.Settings.urlStarWars;
 
@@ -42,6 +46,17 @@ public class CucumberHooks {
             RestAssured.basePath = pathStarWars;
         }
     }
+
+    @Before("@Nexus5xOreo")
+    public void beforeNexus5xOreo() throws MalformedURLException {
+        DriverController.instance.startNexus5xOreo(); //start our Android driver and device when we run a test with "Nexus5xOreo" as the tag
+    }
+
+    @After
+    public void stopAppDriver() {
+        DriverController.instance.stopAppDriver(); //stop the Driver after the scenario or feature has run
+    }
+
 }
 
 

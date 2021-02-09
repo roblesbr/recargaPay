@@ -3,8 +3,7 @@
 <suite name="Test Suite" verbose="1" parallel="tests" thread-count="1" configfailurepolicy="continue">
     <test name="API Tests" annotations="JDK" preserve-order="true">
         <classes>
-            <class name="apis.BaseApiTest"/>
-            <class name="apis.StarWarsApi"/>
+            <class name="BackEndRunner"/>
         </classes>
     </test> <!-- Test -->
 </suite> <!-- Suite -->

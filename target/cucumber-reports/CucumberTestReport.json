@@ -1,0 +1,190 @@
+[
+  {
+    "line": 3,
+    "elements": [
+      {
+        "start_timestamp": "2021-02-09T10:44:32.241Z",
+        "before": [
+          {
+            "result": {
+              "error_message": "java.lang.ExceptionInInitializerError\n\tat java.base/java.lang.J9VMInternals.ensureError(J9VMInternals.java:185)\n\tat java.base/java.lang.J9VMInternals.recordInitializationFailure(J9VMInternals.java:174)\n\tat utils.drivers.AndroidAppDriver.loadNexus5xOreo(AndroidAppDriver.java:16)\n\tat utils.selenium.DriverController.startNexus5xOreo(DriverController.java:46)\n\tat utils.hooks.CucumberHooks.beforeNexus5xOreo(CucumberHooks.java:52)\nCaused by: io.appium.java_client.service.local.InvalidServerInstanceException: NodeJS is either not installed or its executable not present in PATH\n\tat io.appium.java_client.service.local.AppiumServiceBuilder.validatePath(AppiumServiceBuilder.java:123)\n\tat io.appium.java_client.service.local.AppiumServiceBuilder.findBinary(AppiumServiceBuilder.java:133)\n\tat io.appium.java_client.service.local.AppiumServiceBuilder.findDefaultExecutable(AppiumServiceBuilder.java:176)\n\tat org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)\n\tat io.appium.java_client.service.local.AppiumDriverLocalService.buildService(AppiumDriverLocalService.java:91)\n\tat io.appium.java_client.service.local.AppiumDriverLocalService.buildDefaultService(AppiumDriverLocalService.java:87)\n\tat utils.appium.AppiumServer.\u003cclinit\u003e(AppiumServer.java:8)\n\tat utils.drivers.AndroidAppDriver.loadNexus5xOreo(AndroidAppDriver.java:16)\n\tat utils.selenium.DriverController.startNexus5xOreo(DriverController.java:46)\n\tat utils.hooks.CucumberHooks.beforeNexus5xOreo(CucumberHooks.java:52)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:566)\n\tat io.cucumber.java.Invoker.doInvoke(Invoker.java:66)\n\tat io.cucumber.java.Invoker.invoke(Invoker.java:24)\n\tat io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)\n\tat io.cucumber.java.JavaHookDefinition.execute(JavaHookDefinition.java:59)\n\tat io.cucumber.core.runner.CoreHookDefinition.execute(CoreHookDefinition.java:46)\n\tat io.cucumber.core.runner.HookDefinitionMatch.runStep(HookDefinitionMatch.java:21)\n\tat io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)\n\tat io.cucumber.core.runner.TestStep.executeStep(TestStep.java:92)\n\tat io.cucumber.core.runner.TestStep.run(TestStep.java:64)\n\tat io.cucumber.core.runner.TestCase.run(TestCase.java:98)\n\tat io.cucumber.core.runner.Runner.runPickle(Runner.java:71)\n\tat io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$0(TestNGCucumberRunner.java:116)\n\tat io.cucumber.testng.TestNGCucumberRunner$$Lambda$200/0x0000000000000000.accept(Unknown Source)\n\tat io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:117)\n\tat io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:113)\n\tat io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:31)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:566)\n\tat org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)\n\tat org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)\n\tat org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)\n\tat org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)\n\tat org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)\n\tat org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)\n\tat org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)\n\tat org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)\n\tat org.testng.TestRunner$$Lambda$80/0x0000000000000000.accept(Unknown Source)\n\tat java.base/java.util.ArrayList.forEach(ArrayList.java:1541)\n\tat org.testng.TestRunner.privateRun(TestRunner.java:764)\n\tat org.testng.TestRunner.run(TestRunner.java:585)\n\tat org.testng.SuiteRunner.runTest(SuiteRunner.java:384)\n\tat org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)\n\tat org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)\n\tat org.testng.SuiteRunner.run(SuiteRunner.java:286)\n\tat org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)\n\tat org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)\n\tat org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)\n\tat org.testng.TestNG.runSuitesLocally(TestNG.java:1140)\n\tat org.testng.TestNG.runSuites(TestNG.java:1069)\n\tat org.testng.TestNG.run(TestNG.java:1037)\n\tat com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)\n\tat com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)\n",
+              "duration": 705712453,
+              "status": "failed"
+            },
+            "match": {
+              "location": "utils.hooks.CucumberHooks.beforeNexus5xOreo()"
+            }
+          }
+        ],
+        "line": 6,
+        "name": "Test Mobile",
+        "description": "",
+        "id": "dada-la-apk--realizar-pruebas-para-que-se-validen-las-opciones-de-resultados;test-mobile",
+        "after": [
+          {
+            "result": {
+              "duration": 408925,
+              "status": "passed"
+            },
+            "match": {
+              "location": "utils.hooks.CucumberHooks.stopWebDriver()"
+            }
+          },
+          {
+            "result": {
+              "duration": 438551,
+              "status": "passed"
+            },
+            "match": {
+              "location": "utils.hooks.CucumberHooks.stopAppDriver()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 397563,
+              "status": "skipped"
+            },
+            "line": 7,
+            "name": "estoy dentro de la aplicacion",
+            "match": {
+              "location": "steps.MobileSteps.TrianguloAppSteps.dentro_app()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 345218,
+              "status": "skipped"
+            },
+            "line": 8,
+            "name": "ingreso 1,5,5",
+            "match": {
+              "location": "steps.MobileSteps.TrianguloAppSteps.ingreso_isosceles()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 461000,
+              "status": "skipped"
+            },
+            "line": 9,
+            "name": "presiono calcular",
+            "match": {
+              "location": "steps.MobileSteps.TrianguloAppSteps.presiono_calcular()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 348195,
+              "status": "skipped"
+            },
+            "line": 10,
+            "name": "recibo Isosceles",
+            "match": {
+              "location": "steps.MobileSteps.TrianguloAppSteps.check_isosceles()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 426213,
+              "status": "skipped"
+            },
+            "line": 11,
+            "name": "ingreso 1,3,5",
+            "match": {
+              "location": "steps.MobileSteps.TrianguloAppSteps.ingreso_escaleno()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 706380,
+              "status": "skipped"
+            },
+            "line": 12,
+            "name": "presiono calcular",
+            "match": {
+              "location": "steps.MobileSteps.TrianguloAppSteps.presiono_calcular()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5143677,
+              "status": "skipped"
+            },
+            "line": 13,
+            "name": "recibo Escaleno",
+            "match": {
+              "location": "steps.MobileSteps.TrianguloAppSteps.checkEscaleno()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 563786,
+              "status": "skipped"
+            },
+            "line": 14,
+            "name": "ingreso 5,5,5",
+            "match": {
+              "location": "steps.MobileSteps.TrianguloAppSteps.ingreso_equilatero()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 380199,
+              "status": "skipped"
+            },
+            "line": 15,
+            "name": "presiono calcular",
+            "match": {
+              "location": "steps.MobileSteps.TrianguloAppSteps.presiono_calcular()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 420775,
+              "status": "skipped"
+            },
+            "line": 16,
+            "name": "recibo Equilatero",
+            "match": {
+              "location": "steps.MobileSteps.TrianguloAppSteps.checkEquilatero()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Nexus5xOreo"
+          }
+        ]
+      }
+    ],
+    "name": "Dada la apk, realizar pruebas para que se validen las opciones de resultados",
+    "description": "  de triángulos Escalenos, Isósceles y Equilátero ingresando los valores de los lados",
+    "id": "dada-la-apk--realizar-pruebas-para-que-se-validen-las-opciones-de-resultados",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/mobileFeatures/TrianguloApp.feature",
+    "tags": [
+      {
+        "name": "@Nexus5xOreo",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]

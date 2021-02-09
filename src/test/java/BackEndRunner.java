@@ -3,8 +3,8 @@ import io.cucumber.testng.CucumberOptions;
 
 
 @CucumberOptions(
-        features = "src/test/resources/Features/backEndFeatures/",
-        glue = {"utils.hooks", "APISteps","LoginApiTest", "Login.feature"},
+        features = "src/test/resources/features/backEndFeatures/",
+        glue = {"util.hooks", "steps.APISteps","resources.Features.backEndFeatures"},
         //tags = {"~@Ignore"},
         plugin = {"html:target/cucumber-reports/cucumber-pretty",
                 "json:target/cucumber-reports/CucumberTestReport.json",

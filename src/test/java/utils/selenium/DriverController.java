@@ -1,20 +1,22 @@
 package utils.selenium;
 
+import io.appium.java_client.android.AndroidDriver;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
+import utils.appium.AppiumServer;
+import utils.drivers.AndroidAppDriver;
 import utils.drivers.ChromeWebDriver;
-import utils.drivers.FirefoxWebDriver;
+
+import java.net.MalformedURLException;
 
 public class DriverController {
 
-    public static DriverController instance = new DriverController();
-    ////
     private static final Logger log = LogManager.getLogger(DriverController.class.getName());
-    ////
+    public static DriverController instance = new DriverController();
     WebDriver webDriver;
+    AndroidDriver androidDriver;
 
-    ////
     public void startChrome(String arg) {
         if (instance.webDriver != null) return;
         instance.webDriver = ChromeWebDriver.loadChromeDriver(arg);
@@ -22,7 +24,7 @@ public class DriverController {
 
     public void startFirefox(String arg) {
         if (instance.webDriver != null) return;
-        instance.webDriver = FirefoxWebDriver.loadFirefoxDriver(arg);
+        instance.webDriver = java.utils.drivers.FirefoxWebDriver.loadFirefoxDriver(arg);
     }
 
     public void stopWebDriver() {
@@ -37,5 +39,22 @@ public class DriverController {
 
         instance.webDriver = null;
         log.debug("::WebDriver stopped");
+    }
+
+    public void startNexus5xOreo() throws MalformedURLException {
+        if (instance.androidDriver != null) return;
+        instance.androidDriver = AndroidAppDriver.loadNexus5xOreo();
+    }
+
+    public void stopAppDriver() {
+        if (instance.androidDriver == null) return;
+        try {
+            instance.androidDriver.quit();
+        } catch (Exception e) {
+            log.error(e + ":: AndroidDriver stop error");
+        }
+        AppiumServer.stop();
+        instance.androidDriver = null;
+        log.debug(":: AndroidDriver stopped");
     }
 }
